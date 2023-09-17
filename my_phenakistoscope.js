@@ -16,20 +16,20 @@ function setup_pScope(pScope){
 }
 
 function setup_layers(pScope){
-
+//10 layers in total
   new PLayer(null,"#fa97a9"); //lets us draw the whole circle background, ignoring the boundaries
  
-  var layer8 = new PLayer(squares);
+  var layer8 = new PLayer(darkpinkcircle);
   layer8.mode( RING );
   layer8.set_boundary( 0, 400 );
 
-  var layer8 = new PLayer(squares2);
-  layer8.mode( RING );
-  layer8.set_boundary( 0, 400 );
+  var layer9 = new PLayer(darkpinkcircle);
+  layer9.mode( RING );
+  layer9.set_boundary( 0, 400 );
 
-  var layer8 = new PLayer(squares3);
-  layer8.mode( RING );
-  layer8.set_boundary( 0, 400 );
+  var layer10 = new PLayer(circles3);
+  layer10.mode( RING );
+  layer10.set_boundary( 0, 400 );
 
   var layer1 = new PLayer(circles2);
   layer1.mode(RING);
@@ -77,8 +77,8 @@ function whiteflower(x, y, animation, pScope){
   scale(animation.frame*1);
   pScope.draw_image("whiteflower",100,-130)
 }
-
-function squares(x, y, animation, pScope){
+//dark pink circle
+function darkpinkcircle(x, y, animation, pScope){
 
   let angleOffset = (360 / SLICE_COUNT) / 2
   let backgroundArcStart = 270 - angleOffset;
@@ -88,8 +88,8 @@ function squares(x, y, animation, pScope){
   arc(x,y,1600,1600,backgroundArcStart,backgroundArcEnd);
 }
 
-function squares2(x, y, animation, pScope){
-
+function lightpinkcircle(x, y, animation, pScope){
+//lighter pink circle
   let angleOffset = (360 / SLICE_COUNT) / 2
   let backgroundArcStart = 270 - angleOffset;
   let backgroundArcEnd = 270 + angleOffset;
@@ -98,7 +98,7 @@ function squares2(x, y, animation, pScope){
   arc(x,y,1550,1550,backgroundArcStart,backgroundArcEnd);
 }
 
-
+//all flowerleafs are the outer circle
 function flowerleaf(x, y, animation, pScope){
   scale(0.5)
   pScope.draw_image("flowerleaf",x,-300)
@@ -118,7 +118,7 @@ function flowerleaf4(x, y, animation, pScope){
   scale(0.5)
   pScope.draw_image("flowerleaf4",-300,-570)
 }
-
+//middle pink circle
 function frontflower(x, y, animation, pScope){
  
   let angleOffset = (360 / SLICE_COUNT) / 2
@@ -134,7 +134,7 @@ function frontflower(x, y, animation, pScope){
   //pScope.draw_image("pinkflower",0,600)
 
 
-
+//yellow petals
 function circles(x, y, animation, pScope){
 
   fill("#f5cb6a")
@@ -143,7 +143,7 @@ function circles(x, y, animation, pScope){
   let bounce = 50* animation.wave()
   ellipse(0, 250+bounce ,ballSize); 
 }
-
+//grene petal
 function circles2(x, y, animation, pScope){
 
   fill("#939a3c")
@@ -152,8 +152,8 @@ function circles2(x, y, animation, pScope){
   let bounce = 50* animation.wave()
   ellipse(0, 250+bounce ,ballSize); 
 }
-
-function squares3(x, y, animation, pScope){
+//darkgreen circle
+function circles3(x, y, animation, pScope){
 
   let angleOffset = (360 / SLICE_COUNT) / 2
   let backgroundArcStart = 270 - angleOffset;

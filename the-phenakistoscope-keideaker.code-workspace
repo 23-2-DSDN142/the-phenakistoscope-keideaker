@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "../../../Desktop/the-phenakistoscope-keideaker"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "the-phenakistoscope-keideaker",
+		"liveServer.settings.port": 5501
+	}
+}
